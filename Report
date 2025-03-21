@@ -1,0 +1,79 @@
+**Report: Automobile Dataset Cleaning and Preparation**  
+
+**Introduction:**  
+This report describes the data cleaning and preparation process performed on an automobile dataset. The dataset includes columns such as `dateCrawled`, `name`, `seller`, `offerType`, `price`, `abtest`, `vehicleType`, `yearOfRegistration`, `gearbox`, `powerPS`, `model`, `odometer`, `monthOfRegistration`, `fuelType`, `brand`, `notRepairedDamage`, `dateCreated`, `nrOfPictures`, `postalCode`, and `lastSeen`. The dataset did not contain missing values, but extensive cleaning was performed to ensure accuracy and consistency for analysis.  
+
+---
+
+**1. Data Cleaning Process:**  
+
+The dataset underwent a thorough cleaning process to address inconsistencies and improve its quality. The following steps were performed:  
+
+- **Column Name Standardization:**  
+  Column names were reviewed and standardized for consistency. Special characters, spaces, and uppercase letters were replaced with underscores and lowercase letters. For example, `yearOfRegistration` was kept as is, but any inconsistent naming was corrected.  
+
+- **Data Type Validation:**  
+  Each column was checked to ensure the correct data type. Numerical columns (e.g., `price`, `powerPS`, `odometer`) were converted to integers or floats, while categorical columns (e.g., `seller`, `offerType`, `gearbox`) were converted to strings or categorical data types.  
+
+---
+
+**2. Cleaning Categorical Data:**  
+
+Categorical columns, such as `seller`, `offerType`, `vehicleType`, `gearbox`, `fuelType`, `brand`, and `notRepairedDamage`, were cleaned to ensure uniformity and accuracy:  
+
+- **Standardization:**  
+  Variations in categorical values were standardized. For example, in the `gearbox` column, values like "manual," "Manual," and "manuell" were unified into "manual." Similarly, in the `fuelType` column, "petrol," "Petrol," and "Benzin" were standardized to "petrol."  
+
+- **Typos and Errors:**  
+  Typos and errors in categorical data were identified and corrected. For instance, in the `notRepairedDamage` column, "nein" and "no" were unified into "no."  
+
+---
+
+**3. Cleaning Numerical Data:**  
+
+Numerical columns, such as `price`, `powerPS`, `odometer`, and `yearOfRegistration`, were carefully reviewed to ensure accuracy and consistency:  
+
+- **Outlier Detection:**  
+  Outliers in numerical columns were identified and addressed. For example, unrealistic values like a `price` of 0 or extremely high values were removed or corrected.  
+
+- **Unit Standardization:**  
+  Units were standardized across the dataset. For example, `odometer` values were converted to kilometers (km), and `powerPS` values were kept in horsepower (PS).  
+
+---
+
+**4. Column Analysis:**  
+
+- **Frequency and Unique Values:**  
+  The frequency and unique values of categorical columns were analyzed. For example:  
+  - The `fuelType` column had unique values like "petrol," "diesel," "electric," etc., with their respective frequencies calculated.  
+  - The `brand` column was analyzed to determine the frequency of each car brand in the dataset.  
+
+- **Statistical Analysis:**  
+  For numerical columns, statistical measures such as mean, median, and standard deviation were calculated. For example:  
+  - The mean and median of the `price` column were computed to understand the average and central tendency of car prices.  
+  - The mean and standard deviation of the `odometer` column were calculated to analyze the average mileage and its variability.  
+
+---
+
+**5. Additional Data Cleaning Techniques:**  
+
+- **Removing Duplicates:**  
+  Duplicate rows were identified and removed to ensure the dataset contained only unique entries. This step was crucial to avoid skewing the analysis results.  
+
+- **Feature Engineering:**  
+  New columns were created to enhance the dataset's usability. For example, a `car_age` column was created by subtracting `yearOfRegistration` from the current year to determine the age of each car.  
+
+- **Data Validation:**  
+  The dataset was thoroughly validated to ensure all cleaning steps were applied correctly. Cross-checks were performed to confirm the accuracy and consistency of the data.  
+
+---
+
+**6. Final Dataset:**  
+
+After the cleaning process, the dataset is now clean, consistent, and well-organized. It is free from inconsistencies, duplicates, and errors, making it suitable for in-depth analysis, visualization, and reporting.  
+
+---
+
+**Conclusion:**  
+
+The data cleaning process was essential in transforming the raw automobile dataset into a reliable and structured format. By standardizing columns, correcting errors, and ensuring consistency, the dataset is now ready for advanced analysis and insights. Let me know if you need further assistance or additional details!
